@@ -1,0 +1,88 @@
+{
+  "domainToTableMapping": {
+    "User": {
+      "tableName": "users",
+      "fields": {
+        "id": {
+          "columnName": "user_id",
+          "dataType": "INT"
+        },
+        "username": {
+          "columnName": "username",
+          "dataType": "VARCHAR(255)"
+        },
+        "email": {
+          "columnName": "email",
+          "dataType": "VARCHAR(255)"
+        },
+        "password": {
+          "columnName": "password",
+          "dataType": "VARCHAR(128)"
+        }
+      }
+    },
+    "Product": {
+      "tableName": "products",
+      "fields": {
+        "id": {
+          "columnName": "product_id",
+          "dataType": "INT"
+        },
+        "name": {
+          "columnName": "product_name",
+          "dataType": "VARCHAR(255)"
+        },
+        "price": {
+          "columnName": "product_price",
+          "dataType": "DECIMAL(10, 2)"
+        },
+        "description": {
+          "columnName": "product_description",
+          "dataType": "TEXT"
+        }
+      }
+    },
+    "Shipment": {
+      "tableName": "shipments",
+      "fields": {
+        "id": {
+          "columnName": "shipment_id",
+          "dataType": "INT"
+        },
+        "product_id": {
+          "columnName": "product_id",
+          "dataType": "INT"
+        },
+        "quantity": {
+          "columnName": "quantity",
+          "dataType": "INT"
+        },
+        "shipment_date": {
+          "columnName": "shipment_date",
+          "dataType": "DATE"
+        }
+      }
+    },
+    "Customer": {
+      "tableName": "customers",
+      "fields": {
+        "id": {
+          "columnName": "customer_id",
+          "dataType": "INT"
+        },
+        "name": {
+          "columnName": "customer_name",
+          "dataType": "VARCHAR(255)"
+        },
+        "email": {
+          "columnName": "customer_email",
+          "dataType": "VARCHAR(255)"
+        },
+        "address": {
+          "columnName": "customer_address",
+          "dataType": "TEXT"
+        }
+      }
+    }
+  }
+}

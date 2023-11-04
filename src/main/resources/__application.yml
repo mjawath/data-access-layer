@@ -1,0 +1,17 @@
+server:
+  application:
+    name: Meta data
+    url: http://fedex.dev
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/meta xxxxx
+    username: postgres
+    password: 123
+    driver-class-name: org.postgresql.Driverxxxxxxx
+  jpa:
+    mapping-resources: classpath:Shipment.hbm.xml,classpath:Customer.hbm.xml
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+

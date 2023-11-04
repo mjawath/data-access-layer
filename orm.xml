@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="3.0"
+                 xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <package>com.openworld.tech.dal.meta.entity</package>
+
+<!--    meta data configuration -->
+<!--    <entity class="QueryDetail">-->
+<!--        <attributes>-->
+<!--            <id name="country"/>-->
+<!--            <id name="queryId"/>-->
+<!--            <id name="nodeName"/>-->
+<!--            <basic name="entityClass"/>-->
+<!--            <basic name="selectedAttributesAsString"/>-->
+<!--        </attributes>-->
+<!--    </entity>-->
+<!--    end meta data config-->
+
+    <entity class="Shipment" name="Shipment">
+        <table name="SHIPMENT"/>
+        <attributes>
+            <id name="id"/>
+            <basic name="awbNumber"/>
+            <basic name="totalWeight"/>
+            <basic name="totalValue"/>
+            <basic name="committedDate" >
+                <temporal>DATE</temporal>
+            </basic>
+            <basic name="updatedDate">
+                    <temporal>TIMESTAMP</temporal>
+            </basic>
+            <transient name="customer"/>
+        </attributes>
+    </entity>
+
+    <entity class="Customer" name="Customer" metadata-complete="true">
+        <table name="CUSTOMER"/>
+
+        <attributes>
+            <id name="id">
+            </id>
+            <basic name="name"/>
+            <basic name="email"/>
+            <basic name="shipmentId">
+                <column name="shipment_id"/>
+            </basic>
+        </attributes>
+    </entity>
+
+
+    <entity class="Commodity" name="Commodity" metadata-complete="true">
+        <table name="COMMODITY"/>
+        <attributes>
+            <id name="id">
+            </id>
+            <basic name="name"/>
+            <basic name="weight"/>
+            <basic name="value"/>
+            <basic name="shipmentId">
+                <column name="shipment_id"/>
+            </basic>
+        </attributes>
+    </entity>
+
+</entity-mappings>

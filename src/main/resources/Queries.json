@@ -1,0 +1,59 @@
+{
+  "domain-objects": [
+    {
+      "nodeName": "shipment",
+      "entityClass": "com.openworld.tech.dal.meta.entity.Shipment",
+      "namedQueries": [
+        {
+          "queryId": "shipment-default",
+          "selectedAttributes": [
+            "id",
+            "awbNumber"
+          ]
+        },
+        {
+          "queryId": "shipment-with-customer",
+          "selectedAttributes": [
+            "id",
+            "awbNumber",
+            "customer-only"
+          ]
+        }
+      ]
+    },
+    {
+      "nodeName": "customer",
+      "entityClass": "com.fedex.gemini.meta.entity.Customer",
+      "namedQueries": [
+        {
+          "queryId": "customer-default",
+          "selectedAttributes": [
+            "id",
+            "name",
+            "email"
+          ]
+        }
+      ]
+    },
+    {
+      "nodeName": "contact",
+      "entityClass": "com.fedex.gemini.meta.entity.Contact",
+      "namedQueries": [
+        {
+          "queryId": "contact-default",
+          "selectedAttributes": [
+            "id",
+            "contactregioncode"
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+shipment > customer > contact > address
+
+customer > contact > contactregioncode , cusotmerId
+
+get ->  shipment > customer > contact > contactregioncode
+                              us -> constact ,
