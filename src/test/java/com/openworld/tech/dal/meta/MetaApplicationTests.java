@@ -14,7 +14,7 @@ class MetaApplicationTests {
     @Test
     void contextLoads() {
         MetaModel mm= new MetaModel();
-        mm.
+
     }
 
 }

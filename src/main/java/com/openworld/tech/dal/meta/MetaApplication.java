@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.shell.command.annotation.EnableCommand;
 
 @SpringBootApplication
+@EnableCommand(QueryCommand.class)
 public class MetaApplication implements CommandLineRunner {
 
 
