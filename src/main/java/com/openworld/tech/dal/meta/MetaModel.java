@@ -1,7 +1,13 @@
 package com.openworld.tech.dal.meta;
 
+import lombok.*;
+
 import java.util.Map;
 
+@NoArgsConstructor
+@Setter
+@Getter
+//@Builder
 public class MetaModel {
 
     //<global/region/countryCode || DomainDetail>

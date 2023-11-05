@@ -9,15 +9,12 @@ import java.util.List;
 
 @SpringBootTest
 class MetaApplicationTests {
-//
-//    @Autowired
-//    private QueryBuilder buildQuery;
+
 
     @Test
     void contextLoads() {
-        List<String> selectedAttributes = Arrays.asList("id", "location", "customer.id", "customer.name");
-//		String query = buildQuery.buildQuery(selectedAttributes, "shipment-with-customer");
-//		Assertions.assertEquals("SELECT id FROM shipment",query);
+        MetaModel mm= new MetaModel();
+        mm.
     }
 
 }
