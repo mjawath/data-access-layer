@@ -23,7 +23,7 @@
     },
     {
       "nodeName": "customer",
-      "entityClass": "com.fedex.gemini.meta.entity.Customer",
+      "entityClass": "com.test.meta.entity.Customer",
       "namedQueries": [
         {
           "queryId": "customer-default",
@@ -37,7 +37,7 @@
     },
     {
       "nodeName": "contact",
-      "entityClass": "com.fedex.gemini.meta.entity.Contact",
+      "entityClass": "com.test.meta.entity.Contact",
       "namedQueries": [
         {
           "queryId": "contact-default",

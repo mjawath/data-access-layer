@@ -1,7 +1,7 @@
 server:
   application:
     name: Meta data
-    url: http://fedex.dev
+    url: http://test.dev
 
 spring:
   datasource:

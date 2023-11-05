@@ -31,7 +31,7 @@ public class PersistentLayerConfiguration {
 //        properties.setProperty("javax.persistence.schema-generation.database.action", "create");
 //        properties.setProperty("javax.persistence.schema-generation.database.action", "create");
 //        factory.setJpaProperties(properties);
-//        factory.setPackagesToScan("com.fedex.meta");
+//        factory.setPackagesToScan("com.test.meta");
         return factory;
     }
 
