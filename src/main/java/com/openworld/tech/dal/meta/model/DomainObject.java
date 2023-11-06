@@ -1,4 +1,4 @@
-package com.openworld.tech.dal.meta;
+package com.openworld.tech.dal.meta.model;
 
 import lombok.*;
 

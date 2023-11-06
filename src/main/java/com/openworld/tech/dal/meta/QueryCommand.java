@@ -1,5 +1,6 @@
 package com.openworld.tech.dal.meta;
 
+import com.openworld.tech.dal.meta.model.*;
 import org.springframework.shell.command.annotation.Command;
 import org.springframework.shell.command.annotation.Option;
 
