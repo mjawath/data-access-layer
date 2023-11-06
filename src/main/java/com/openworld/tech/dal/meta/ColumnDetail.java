@@ -3,10 +3,12 @@ package com.openworld.tech.dal.meta;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @Builder
+@ToString
 public class ColumnDetail {
     private String column;
     private ColumnType columnType;

@@ -7,7 +7,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 import java.util.Properties;
 
-@Configuration
+//@Configuration ignoring orm in the interest of Meta DAL
 //@EnableTransactionManagement
 //@refeshScope//
 public class PersistentLayerConfiguration {
