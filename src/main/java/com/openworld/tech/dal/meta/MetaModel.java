@@ -16,6 +16,5 @@ public class MetaModel {
     private Map<String, DomainObject> domainObjectMap;
 
 
-
 }
 

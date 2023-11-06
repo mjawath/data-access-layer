@@ -28,23 +28,31 @@ public class QueryCommand {
         }
         //get the domain object from the map
         DomainObject domainObject = metaModel.getDomainObjectMap().get(rootObject);
-        //check if the attribute exists
-        if (!domainObject.getAttributeDetailMap().containsKey(values[0])) {
-            return "Attribute is not found";
-        }
+
         //print the attribute detail of getAttributeDetailMap
         for (Map.Entry<String, AttributeDetail> entry : domainObject.getAttributeDetailMap().entrySet()) {
+
             System.out.println("AttributeDetail Detail: "+entry.getValue());
         }
 
         //get the table detail from the domain object
         TableDetail tableDetail = domainObject.getTableDetail();
+        //check if the attribute exists
+        if (tableDetail==null) {
+            return "TableDetail is not found";
+        }
         System.out.println(tableDetail);
 
         //print the attribute detail of tableDetail
         for (Map.Entry<String, ColumnDetail> entry : domainObject.getTableDetail().getColumnDetailMap().entrySet()) {
             System.out.println("Table Column Detail: "+entry.getValue());
         }
+        //for passed values find the attributes from attribute map
+        
+        //check if the attribute exists
+//        if (!entry) {
+//            return "Attribute is not found";
+//        }
 
 
         return "query command executed";
