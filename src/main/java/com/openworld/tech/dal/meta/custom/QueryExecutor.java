@@ -10,10 +10,10 @@ import java.util.Map;
 public class QueryExecutor {
 
     @Autowired
-    private QueryBuilder queryBuilder;
+    private JPAQueryBuilder JPAQueryBuilder;
 
     public Map<String, Object> executeQuery(String queryId, String rootNode, Map<String, Object> params) {
-        String query = queryBuilder.buildQuery(queryId, rootNode, params);
+        String query = JPAQueryBuilder.buildQuery(queryId, rootNode, params);
 //        jdbcTemplate
         return null;
     }

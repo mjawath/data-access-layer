@@ -1,6 +1,7 @@
 package com.openworld.tech.dal.meta;
 
 import com.openworld.tech.dal.meta.model.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.command.annotation.Command;
 import org.springframework.shell.command.annotation.Option;
 
@@ -12,6 +13,11 @@ import java.util.Map;
 public class QueryCommand {
 
     private MetaModel metaModel;
+    @Autowired
+    private QueryBuilder queryBuilder;
+
+//    @Autowired
+    private ExcelToMetaModelMapper excelToMetaModelMapper;
 
     public QueryCommand() {
         init();
@@ -48,20 +54,17 @@ public class QueryCommand {
         for (Map.Entry<String, ColumnDetail> entry : domainObject.getTableDetail().getColumnDetailMap().entrySet()) {
             System.out.println("Table Column Detail: "+entry.getValue());
         }
-        //for passed values find the attributes from attribute map
-        
-        //check if the attribute exists
-//        if (!entry) {
-//            return "Attribute is not found";
-//        }
 
+        String sql = queryBuilder.buildQuery(metaModel, rootObject, values);
+        System.out.println(sql);
 
         return "query command executed";
     }
 
     public void init() {
-        metaModel = new MetaModel();
+        excelToMetaModelMapper= new ExcelToMetaModelMapper();
 
+        metaModel = excelToMetaModelMapper.mapExcelToMetaModel();
 
         ColumnDetail colId = ColumnDetail.builder()
                 .column("ID")
@@ -99,7 +102,7 @@ public class QueryCommand {
         shipmentObj.setAttributeDetailMap(Map.of(id.getAttributeName(), id,
                 awbNumber.getAttributeName(), awbNumber));
 
-        metaModel.setDomainObjectMap(Map.of(shipmentObj.getDomainName(), shipmentObj));
+//        metaModel.setDomainObjectMap(Map.of(shipmentObj.getDomainName(), shipmentObj));
     }
 }
 

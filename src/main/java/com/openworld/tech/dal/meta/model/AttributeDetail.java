@@ -13,6 +13,7 @@ public class AttributeDetail {
     private String attributeName;
     private AttributeType attributeType;//enum
     private ColumnDetail columnDetail;
+
     private DomainObject domainObject;
 
     public enum AttributeType {
