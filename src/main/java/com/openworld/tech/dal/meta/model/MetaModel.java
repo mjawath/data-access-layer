@@ -54,5 +54,9 @@ public class MetaModel {
     public void addDomainObject(DomainObject domainObject) {
         domainObjectMap.put(domainObject.getDomainName(), domainObject);
     }
+
+    public void getDomainForCountry(String domainObject) {
+        DomainObject ddd = domainObjectMap.get(domainObject);
+    }
 }
 

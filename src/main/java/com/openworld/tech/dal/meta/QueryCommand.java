@@ -26,6 +26,8 @@ public class QueryCommand {
 
     @Command(command = "query")
     public String query(@Option(defaultValue = "shipment") String rootObject, String... values) {
+
+
         System.out.println("Query Command Executed ");
         System.out.println("Root object context: " + rootObject);
         System.out.println("Attributes to query: " + Arrays.toString(values));
